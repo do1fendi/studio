@@ -21,7 +21,7 @@ const Nav = () => {
     //     </Link>
     //   </nav>
     // </div>
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <nav className="sticky top-0 flex items-center justify-between flex-wrap bg-gradient-to-r from-violet-500 to-violet-700 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <svg
           className="fill-current h-8 w-8 mr-2"
@@ -51,7 +51,7 @@ const Nav = () => {
       </div>
       <div className={isShow ? "block w-full lg:block lg:flex lg:items-center lg:w-auto" : "hidden w-full lg:block lg:flex lg:items-center lg:w-auto"}>
         <nav className="flex gap-2 text-sm" >
-          <Link href="/">
+          <Link href="/studio">
             <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
               Home
             </a>
