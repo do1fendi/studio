@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
 import { ReactNode } from "react";
+import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
 
 type Children = {
@@ -11,6 +11,7 @@ const Layout = ({ children }: Children) => {
     <div>
       <Nav />
       {children}
+      <Footer />
     </div>
   );
 };
