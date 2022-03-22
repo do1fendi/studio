@@ -1,37 +1,16 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Nav = () => {
   const [isShow, setIsShow] = useState(false);
   const setShowNav = () => {
-    setIsShow(!isShow);   
+    setIsShow(!isShow);
   };
   return (
-    // <div classNameName="flex justify-between items-center p-4">
-    //   <h1 classNameName="text-3xl font-teal-600">STUDIO</h1>
-    //   <nav classNameName="flex gap-2">
-    //     <Link href="/">
-    //       <a>Home</a>
-    //     </Link>
-    //     <Link href="/project">
-    //       <a>Project</a>
-    //     </Link>
-    //     <Link href="/about">
-    //       <a>About</a>
-    //     </Link>
-    //   </nav>
-    // </div>
-    <nav className="sticky top-0 flex items-center justify-between flex-wrap bg-gradient-to-r from-violet-500 to-violet-700 p-6">
+    <nav className="sticky top-0 flex items-center justify-between flex-wrap p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <svg
-          className="fill-current h-8 w-8 mr-2"
-          width="54"
-          height="54"
-          viewBox="0 0 54 54"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-        </svg>
+        <Image src={`${process.env.BASEURL}/images/logo/logo.webp`} width="40" height="40" />
         <span className="font-semibold text-xl tracking-tight">STUDIO</span>
       </div>
       <div className="block lg:hidden">
@@ -49,8 +28,14 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      <div className={isShow ? "block w-full lg:block lg:flex lg:items-center lg:w-auto" : "hidden w-full lg:block lg:flex lg:items-center lg:w-auto"}>
-        <nav className="flex gap-2 text-sm" >
+      <div
+        className={
+          isShow
+            ? "block w-full lg:block lg:flex lg:items-center lg:w-auto"
+            : "hidden w-full lg:block lg:flex lg:items-center lg:w-auto"
+        }
+      >
+        <nav className="flex gap-2 text-sm">
           <Link href="/studio">
             <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
               Home
