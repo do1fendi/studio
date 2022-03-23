@@ -2,14 +2,14 @@
 const nextConfig = {
   trailingSlash: true,
   basePath: "",
-  //assetPrefix: "/studio",
+  assetPrefix: "/studio",
   images: {
     loader: "imgix",
     path: "",
   },
   env: {
-    // BASEURL: "https://do1fendi.github.io/studio",
-    BASEURL: "http://localhost:3000",
+    BASEURL: "https://do1fendi.github.io/studio",
+    // BASEURL: "http://localhost:3000",
   },
 };
 
