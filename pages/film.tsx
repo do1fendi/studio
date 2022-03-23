@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 
-const About: NextPage = () => {
+const FILM: NextPage = () => {
   return (
     <div>
-      <h1>ABOUT</h1>
+      <h1>FILM EDITING</h1>
     </div>
   );
 };
 
-export default About;
+export default FILM;
