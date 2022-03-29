@@ -6,35 +6,24 @@ import Card from "../Card/Card";
 const Project = () => {
   const projects = useSelector((state: RootState) => state.project.value);
   return (
-    <>
+    <div className="container m-auto mb-5">
       <div className="flex justify-center">
-        <h1 className="text-3xl font-bold text-gray-700 mb-5">PROJECTS</h1>
+        <h1 className="text-5xl font-bold text-gray-700 mb-5">PROJECTS</h1>
       </div>
-      <div className="flex flex-row flex-wrap justify-evenly">
-        <Card
-          title=""
-          picUrl={`${process.env.BASEURL}/images/project/tbdamai.webp`}
-          category=""
-          link=""
-        />
-        <Card
-          title=""
-          picUrl={`${process.env.BASEURL}/images/project/tbdamai.webp`}
-          category=""
-          link=""
-        />
-        <Card
-          title=""
-          picUrl={`${process.env.BASEURL}/images/project/tbdamai.webp`}
-          category=""
-          link=""
-        />
-        <Card
-          title=""
-          picUrl={`${process.env.BASEURL}/images/project/tbdamai.webp`}
-          category=""
-          link=""
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        {projects.map((project, index) => {
+          return (
+            <div key={index} className="shadow-sm mb-1 hover:shadow-2xl cursor-pointer">
+              <Card
+                title={project.title}
+                picUrl={project.picUrl}
+                category={project.category}
+                link={project.title}
+              />
+            </div>
+          );
+        })}
+
         {/* <div className="flex justify-center p-3">
         <Image
           src={`${process.env.BASEURL}/images/logo/logoGrey.webp`}
@@ -43,7 +32,7 @@ const Project = () => {
         />
       </div> */}
       </div>
-    </>
+    </div>
   );
 };
 

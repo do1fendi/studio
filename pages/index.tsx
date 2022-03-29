@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     // <div className="h-screen" style={{ backgroundImage: `url('${process.env.BASEURL}/images/bg/banner-bg.jpg')`}}>
     <div className="">
-      <div className="relative flex items-center justify-center mb-12 overflow-hidden p-8">
+      <div className="relative flex items-center justify-center mb-12 overflow-hidden py-1">
         <Image
           src={`${process.env.BASEURL}/images/logo/logo.png`}
           width={450}

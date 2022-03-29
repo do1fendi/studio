@@ -11,7 +11,7 @@ const Nav = () => {
     setIsShow(!isShow);
   };
   return (
-    <nav className="sticky top-0 flex items-center justify-between flex-wrap p-6">
+    <nav className="flex items-center justify-between flex-wrap p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Image
           src={`${process.env.BASEURL}/images/logo/logo.webp`}
@@ -42,7 +42,7 @@ const Nav = () => {
             : "hidden w-full lg:block lg:flex lg:items-center lg:w-auto"
         }
       >
-        <nav className="text-sm">
+        <nav className="text-sm font-bold">
           <Link href="/">
             <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-gray-900 lg:mr-3">
               HOME
