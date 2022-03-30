@@ -5,8 +5,8 @@ import Project from "../components/Project/Project";
 const Home: NextPage = () => {
   return (
     // <div className="h-screen" style={{ backgroundImage: `url('${process.env.BASEURL}/images/bg/banner-bg.jpg')`}}>
-    <div className="">
-      <div className="relative flex items-center justify-center mb-12 overflow-hidden py-1">
+    <>
+      <div className="relative flex items-center justify-center mb-12 overflow-hidden py-16 lg:py-48">
         <Image
           src={`${process.env.BASEURL}/images/logo/logo.png`}
           width={450}
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

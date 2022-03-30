@@ -6,11 +6,11 @@ import Card from "../Card/Card";
 const Project = () => {
   const projects = useSelector((state: RootState) => state.project.value);
   return (
-    <div className="container m-auto mb-5">
+    <div className="container m-auto mb-5 px-2">
       <div className="flex justify-center">
         <h1 className="text-5xl font-bold text-gray-700 mb-5">PROJECTS</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project, index) => {
           return (
             <div key={index} className="shadow-sm mb-1 hover:shadow-2xl cursor-pointer">
