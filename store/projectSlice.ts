@@ -5,7 +5,7 @@ export interface ProjectState {
     id: string;
     title: string;
     category: string;
-    picUrl: string;
+    imgList: string[];
     link: string;
     extLink: string;
   }[];
@@ -17,47 +17,47 @@ const initialState: ProjectState = {
       id: "tbdamai",
       title: "企業商品展示網站",
       category: "WEB DEVELOPMENT",
-      picUrl: `${process.env.BASEURL}/images/project/tbdamai.webp`,
-      link: "url",
+      imgList: [`${process.env.BASEURL}/images/project/tbdamai/tbdamai.webp`],
+      link: `${process.env.BASEURL}/project/tbdamai`,
       extLink: "https://tbdamai.net",
     },
     {
       id: "cari-hp",
       title: "CARI-HP",
       category: "WEB DEVELOPMENT",
-      picUrl: `${process.env.BASEURL}/images/project/cari-hp.webp`,
-      link: "",
+      imgList: [`${process.env.BASEURL}/images/project/cari-hp/cari-hp.webp`],
+      link: `${process.env.BASEURL}/project/cari-hp`,
       extLink: "https://cari-hp.com",
     },
     {
       id: "damarane",
       title: "植物新藥產品介紹",
       category: "FILM EDITING",
-      picUrl: `${process.env.BASEURL}/images/project/damarane.png`,
-      link: "",
+      imgList: [`${process.env.BASEURL}/images/project/damarane/damarane.png`],
+      link: `${process.env.BASEURL}/project/damarane`,
       extLink: "",
     },
     {
       id: "nccu-web",
       title: "學分登錄系統",
       category: "WEB DEVELOPMENT",
-      picUrl: `${process.env.BASEURL}/images/project/nccu-mba.jpeg`,
-      link: "url",
+      imgList: [`${process.env.BASEURL}/images/project/nccu-mba/nccu-mba.jpeg`],
+      link: `${process.env.BASEURL}/project/nccu-web`,
       extLink: "",
     },
     {
-      id: "",
+      id: "tjakudain",
       title: "MV 拍攝剪輯",
       category: "FILM EDITING",
-      picUrl: `${process.env.BASEURL}/images/project/tjakudain.jpeg`,
-      link: "",
+      imgList: [`${process.env.BASEURL}/images/project/tjakudain/tjakudain.jpeg`],
+      link: `${process.env.BASEURL}/project/tjakudain`,
       extLink: "",
     },
     {
       id: "nccu-graduate",
       title: "線上撥穗典禮",
       category: "WEB DEVEOPMENT",
-      picUrl: `${process.env.BASEURL}/images/project/nccu-graduate.gif`,
+      imgList: [`${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate.gif`],
       link: "",
       extLink: "",
     },
@@ -65,24 +65,24 @@ const initialState: ProjectState = {
       id: "smartwatch",
       title: "品牌官網設計",
       category: "UI DESIGN",
-      picUrl: `${process.env.BASEURL}/images/project/smartwatch.gif`,
-      link: "url",
+      imgList: [`${process.env.BASEURL}/images/project/smartwatch/smartwatch.gif`],
+      link: `${process.env.BASEURL}/project/smartwatch`,
       extLink: "",
     },
     {
       id: "drift",
       title: "《漂》紀錄短片",
       category: "FILM EDITING",
-      picUrl: `${process.env.BASEURL}/images/project/drift.png`,
-      link: "url",
+      imgList: [`${process.env.BASEURL}/images/project/drift/drift.png`],
+      link: `${process.env.BASEURL}/project/drift`,
       extLink: "",
     },
     {
       id: "interface",
       title: "介面/課程內容設計",
       category: "UI DESIGN",
-      picUrl: `${process.env.BASEURL}/images/project/interface.webp`,
-      link: "url",
+      imgList: [`${process.env.BASEURL}/images/project/interface/interface.webp`],
+      link: `${process.env.BASEURL}/project/interface`,
       extLink: "",
     },
     // { title: "", category: "FILM EDITING", picUrl: "http", link: "" },
@@ -98,5 +98,5 @@ export const projectSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 // export const {} = projectSlice.actions;
-
+export const allProject = initialState;
 export default projectSlice.reducer;

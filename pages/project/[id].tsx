@@ -1,29 +1,29 @@
 import React from "react";
-import { useRouter } from "next/router";
-import { RootState } from "../../store";
-import { useSelector } from "react-redux";
 import { GetStaticPaths } from "next";
+import { allProject } from "../../store/projectSlice";
 
-const DetailProject = () => {
-  const router = useRouter();
-  const { id } = router.query;
+type idProps = {
+  id: string;
+  curProject: any;
+};
+const DetailProject = (props: idProps) => {
   return (
     <div>
-      <h1>{id}</h1>
+      <h1>{props.id}</h1>
+      <p>{JSON.stringify(props.curProject)}</p>
     </div>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
-  //   const projects = useSelector((state: RootState) => state.project.value);
-  //   console.log(projects);
-  // const paths = projects.map((project) => {
-  //     return {
-  //       params: { prod: project.id },
-  //     };
-  //   });
+  const projects = allProject.value;
+  const paths = projects.map((project) => {
+    return {
+      params: { id: project.id },
+    };
+  });
   return {
-    paths: [{ params: { id: "cari-hp" } }, { params: { id: "cari-hp1" } }],
+    paths,
     fallback: false, // false or 'blocking'
   };
 };
@@ -35,8 +35,11 @@ type Context = {
 };
 export function getStaticProps(context: Context) {
   const id = context.params.id;
+  const curProject = allProject.value.filter(
+    (proj: { id: string }) => proj.id === id
+  );
   return {
-    props: { id },
+    props: { id, curProject },
   };
 }
 

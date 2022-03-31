@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { RootState } from "../../store";
 import { useSelector } from "react-redux";
+import Link from "next/link";
 import Card from "../Card/Card";
 
 const Project = () => {
@@ -13,14 +13,21 @@ const Project = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project, index) => {
           return (
-            <div key={index} className="shadow-sm mb-1 hover:shadow-2xl cursor-pointer">
-              <Card
-                title={project.title}
-                picUrl={project.picUrl}
-                category={project.category}
-                link={project.title}
-              />
-            </div>
+            <Link href={project.link}>
+              <a>
+                <div
+                  key={index}
+                  className="shadow-sm mb-1 hover:shadow-2xl cursor-pointer"
+                >
+                  <Card
+                    title={project.title}
+                    picUrl={project.imgList[0]}
+                    category={project.category}
+                    link={project.title}
+                  />
+                </div>
+              </a>
+            </Link>
           );
         })}
 
