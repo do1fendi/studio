@@ -13,11 +13,15 @@ const Nav = () => {
   return (
     <nav className="flex items-center justify-between flex-wrap p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Image
-          src={`${process.env.BASEURL}/images/logo/logo.webp`}
-          width="40"
-          height="40"
-        />
+        <Link href={`${process.env.BASEURL}`}>
+          <a>
+            <Image
+              src={`${process.env.BASEURL}/images/logo/logo.webp`}
+              width="40"
+              height="40"
+            />
+          </a>
+        </Link>
         <span className="font-semibold text-xl tracking-tight">STUDIO</span>
       </div>
       <div className="block lg:hidden">

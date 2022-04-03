@@ -21,7 +21,7 @@ const Project = () => {
                 >
                   <Card
                     title={project.title}
-                    picUrl={project.imgList[0]}
+                    picUrl={project.imgList ? project.imgList[0] :""}
                     category={project.category}
                     link={project.title}
                   />

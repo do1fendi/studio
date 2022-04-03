@@ -1,10 +1,10 @@
 import Image from "next/image";
 // import Link from "next/link";
 type CardType = {
-  title: string;
+  title?: string;
   picUrl: string;
-  category: string;
-  link: string;
+  category?: string;
+  link?: string;
 };
 
 const Card = (props: CardType) => {

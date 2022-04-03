@@ -9,8 +9,8 @@ const Home: NextPage = () => {
       <div className="relative flex items-center justify-center mb-12 overflow-hidden py-16 lg:py-48">
         <Image
           src={`${process.env.BASEURL}/images/logo/logo.png`}
-          width={450}
-          height={200}
+          width={350}
+          height={150}
           className="z-30"
         />
         <video
