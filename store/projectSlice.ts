@@ -72,6 +72,14 @@ const initialState: ProjectState = {
           imgUrl: `${process.env.BASEURL}/images/project/tjakudain/tjakudain.jpeg`,
           vidUrl: "https://www.youtube.com/embed/ZHpHg1kPBCs",
         },
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/tjakudain/tjakudain-1.jpg`,
+          vidUrl: "https://www.youtube.com/embed/1MaHTsxKgmg",
+        },
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/tjakudain/tjakudain-2.jpg`,
+          vidUrl: "https://www.youtube.com/embed/DDimvWs4vXI",
+        },
       ],
     },
     {

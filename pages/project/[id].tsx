@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { GetStaticPaths } from "next";
 import { allProject } from "../../store/projectSlice";
 import Card from "../../components/Card/Card";
@@ -9,17 +9,26 @@ type idProps = {
   id: string;
   curProject: any;
 };
+
+interface showVideo {
+  open(): void;
+}
 const DetailProject = (props: idProps) => {
   const curProject = props.curProject[0];
+  const vidRef = useRef<showVideo>(null);
   return (
     <>
-      {/* {<p>{JSON.stringify(props.curProject)}</p>} */}
+      {/* {<p>{JSON.stringify(curProject)}</p>} */}
 
       {/* set if video */}
       {curProject.video ? (
         <>
-         <div className="relative flex flex-col items-center justify-center mb-12 overflow-hidden py-16 lg:py-48 z-10 w-full h-full">
-            <button className="z-30 text-3xl  lg:text-6xl font-bold p-2 text-gray-100">
+          <div className="relative flex flex-col items-center justify-center mb-12 overflow-hidden py-16 lg:py-48 z-10 w-full h-full bg-gray-900">
+            <Video vidUrl={curProject.video[0].vidUrl} ref={vidRef} />
+            <button
+              className="z-30 text-3xl  lg:text-6xl font-bold p-2 text-gray-100"
+              onClick={() => vidRef.current?.open()}
+            >
               PLAY
             </button>
             <Image
@@ -31,16 +40,33 @@ const DetailProject = (props: idProps) => {
               className="opacity-60"
             />
           </div>
-          <Video vidUrl="" />
+          <div className="container m-auto p-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {curProject.video.map((proj: any, index: number) => {
+              return (
+                <div
+                  key={index}
+                  className="shadow-sm mb-1 hover:shadow-2xl cursor-pointer"
+                >
+                  <Video vidUrl={proj.vidUrl} ref={vidRef} />
+                  <button
+                    className="z-30 text-3xl  lg:text-6xl font-bold p-2 text-gray-100"
+                    onClick={() => vidRef.current?.open()}
+                  >
+                    <Card picUrl={proj.imgUrl} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </>
       ) : (
         <>
           <div className="relative flex flex-col items-center justify-center mb-12 overflow-hidden py-16 lg:py-48 z-10">
             <h1 className="z-30 text-3xl  lg:text-6xl font-bold p-2">
-              {props.curProject[0].title}
+              {curProject.title}
             </h1>
-            <h2 className="z-30 text-lg">{props.curProject[0].tech}</h2>
-            <h2 className="z-30 text-lg uppercase">{props.curProject[0].id}</h2>
+            <h2 className="z-30 text-lg">{curProject.tech}</h2>
+            <h2 className="z-30 text-lg uppercase">{curProject.id}</h2>
             <Image
               src={`${process.env.BASEURL}/images/bg/banner-detail.webp`}
               layout="fill"

@@ -1,20 +1,22 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import PropTypes from "prop-types";
 
 type videoType = {
   vidUrl: string;
 };
+
 const Video = forwardRef((props: videoType, ref) => {
   const [isPlay, setIsPlay] = useState(false);
   const close = () => {
     setIsPlay(false);
   };
 
-    // useImperativeHandle(ref, () =>{
-    //    open(){
-    //       setIsPlay(true);
-    //     };
-    // },[]);
+  useImperativeHandle(ref, () => {
+    return {
+      open() {
+        setIsPlay(true);
+      },
+    };
+  });
 
   return (
     <>
@@ -29,7 +31,7 @@ const Video = forwardRef((props: videoType, ref) => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/ZHpHg1kPBCs"
+            src={props.vidUrl}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -42,5 +44,5 @@ const Video = forwardRef((props: videoType, ref) => {
     </>
   );
 });
-
+Video.displayName = "Video";
 export default Video;
