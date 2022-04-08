@@ -47,14 +47,33 @@ const initialState: ProjectState = {
       link: `${process.env.BASEURL}/project/damarane`,
       extLink: "",
       tech: "",
+      video: [
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/damarane/damarane-1.jpg`,
+          vidUrl: "https://www.youtube.com/embed/TYy58vSlGxE",
+        },
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/damarane/damarane.png`,
+          vidUrl: "https://www.youtube.com/embed/VEZNEoibNqc",
+        },
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/damarane/damarane-2.jpg`,
+          vidUrl: "https://www.youtube.com/embed/v55eM61lMwA",
+        },
+      ],
     },
     {
       id: "nccu-web",
       title: "學分登錄系統",
       category: "WEB DEVELOPMENT",
-      imgList: [`${process.env.BASEURL}/images/project/nccu-mba/nccu-mba.jpeg`],
+      imgList: [
+        `${process.env.BASEURL}/images/project/nccu-mba/nccu-mba.jpeg`,
+        `${process.env.BASEURL}/images/project/nccu-mba/nccu-mba-1.webp`,
+        `${process.env.BASEURL}/images/project/nccu-mba/nccu-mba-2.webp`,
+        `${process.env.BASEURL}/images/project/nccu-mba/nccu-mba-3.webp`,
+      ],
       link: `${process.env.BASEURL}/project/nccu-web`,
-      extLink: "",
+      extLink: "https://www.mbastudent.nccu.edu.tw",
       tech: "",
     },
     {
@@ -112,6 +131,20 @@ const initialState: ProjectState = {
       link: `${process.env.BASEURL}/project/drift`,
       extLink: "",
       tech: "",
+      video: [
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/drift/drift-3.jpg`,
+          vidUrl: "https://www.youtube.com/embed/Eojy9PEMvzI",
+        },
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/drift/drift-2.jpg`,
+          vidUrl: "https://www.youtube.com/embed/xetIM8m5GtE",
+        },
+        {
+          imgUrl: `${process.env.BASEURL}/images/project/drift/drift-1.jpg`,
+          vidUrl: "https://www.youtube.com/embed/o1YX4w9mjVI",
+        },
+      ],
     },
     {
       id: "interface",

@@ -4,6 +4,7 @@ import { allProject } from "../../store/projectSlice";
 import Card from "../../components/Card/Card";
 import Image from "next/image";
 import Video from "../../components/Video/Video";
+import Link from "next/link";
 
 type idProps = {
   id: string;
@@ -87,6 +88,21 @@ const DetailProject = (props: idProps) => {
           </div>
         </>
       )}
+      <>
+        {curProject.extLink ? (
+          <div className="flex justify-center m-5">
+            <Link href={curProject.extLink}>
+              <a>
+                <button className="bg-transparent text-gray-700 font-semibold hover:text-gray-400 py-2 px-4 border border-gray-200 hover:border-gray-400 rounded">
+                  VIEW SITE
+                </button>
+              </a>
+            </Link>
+          </div>
+        ) : (
+          ""
+        )}
+      </>
     </>
   );
 };
