@@ -107,9 +107,14 @@ const initialState: ProjectState = {
       category: "WEB DEVEOPMENT",
       imgList: [
         `${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate.gif`,
+        `${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate-1.png`,
+        `${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate-2.webp`,
+        `${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate-3.png`,
+        `${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate-4.png`,
+        `${process.env.BASEURL}/images/project/nccu-graduate/nccu-graduate-5.webp`,
       ],
-      link: "",
-      extLink: "",
+      link: `${process.env.BASEURL}/project/nccu-graduate`,
+      extLink: "https://commerce.graduation.nccu.edu.tw",
       tech: "",
     },
     {
@@ -118,6 +123,10 @@ const initialState: ProjectState = {
       category: "UI DESIGN",
       imgList: [
         `${process.env.BASEURL}/images/project/smartwatch/smartwatch.gif`,
+        `${process.env.BASEURL}/images/project/smartwatch/smartwatch-1.webp`,
+        `${process.env.BASEURL}/images/project/smartwatch/smartwatch-2.png`,
+        `${process.env.BASEURL}/images/project/smartwatch/smartwatch-3.png`,
+        `${process.env.BASEURL}/images/project/smartwatch/smartwatch-4.png`,
       ],
       link: `${process.env.BASEURL}/project/smartwatch`,
       extLink: "",
