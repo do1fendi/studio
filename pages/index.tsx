@@ -27,8 +27,8 @@ const Home: NextPage = () => {
         </video>
       </div>
       <Project />
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-2">
-        <div className="lg:order-1">
+      <div className="grid grid-cols-4 lg:grid-cols-5 gap-2">
+        <div className="lg:order-1 lg:p-5">
           <Image
             src={`${process.env.BASEURL}/images/team/alex.webp`}
             layout="responsive"
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             height={200}
           />
         </div>
-        <div className="lg:order-2">
+        <div className="lg:order-2 lg:p-5">
           <Image
             src={`${process.env.BASEURL}/images/team/fendi.webp`}
             layout="responsive"
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
             height={200}
           />
         </div>
-        <div className="order-first col-span-2 lg:col-span-1 lg:order-3 bg-gray-100 flex flex-col items-center justify-center py-3">
+        <div className="order-first col-span-4 lg:col-span-1 lg:order-3 bg-gray-100 flex flex-col items-center justify-center py-3">
           <h1 className="text-3xl text-gray-600">OUR</h1>
           <h2 className="text-2xl text-gray-600 font-bold">TEAM</h2>
           <p className="text-sm p-3 mt-3 text-center text-gray-500">
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             開發、影片拍攝/剪輯等服務
           </p>
         </div>
-        <div className="lg:order-3">
+        <div className="lg:order-3 lg:p-5">
           <Image
             src={`${process.env.BASEURL}/images/team/angeline.webp`}
             layout="responsive"
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
             height={200}
           />
         </div>
-        <div className="lg:order-5">
+        <div className="lg:order-5 lg:p-5">
           <Image
             src={`${process.env.BASEURL}/images/team/venus.webp`}
             layout="responsive"
