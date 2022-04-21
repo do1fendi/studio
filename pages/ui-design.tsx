@@ -1,4 +1,3 @@
-
 import type { NextPage } from "next";
 import Image from "next/image";
 import { RootState } from "../store";
@@ -6,8 +5,8 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 import Card from "../components/Card/Card";
 
-const WebDev: NextPage = () => {
-  const category = "WEB DEVELOPMENT";
+const Uidesign: NextPage = () => {
+  const category = "UI DESIGN";
   const projects = useSelector((state: RootState) =>
     state.project.value.filter((proj) => proj.category === category)
   );
@@ -43,4 +42,4 @@ const WebDev: NextPage = () => {
   );
 };
 
-export default WebDev;
+export default Uidesign;

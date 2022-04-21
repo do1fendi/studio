@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </div>
       <Project />
       <div className="grid grid-cols-4 lg:grid-cols-5 gap-2">
-        <div className="lg:order-1 lg:p-5">
+        <div className="lg:order-1 lg:p-5 lg:drop-shadow-lg">
           <Image
             src={`${process.env.BASEURL}/images/team/alex.webp`}
             layout="responsive"
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             height={200}
           />
         </div>
-        <div className="lg:order-2 lg:p-5">
+        <div className="lg:order-2 lg:p-5 lg:drop-shadow-lg">
           <Image
             src={`${process.env.BASEURL}/images/team/fendi.webp`}
             layout="responsive"
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             開發、影片拍攝/剪輯等服務
           </p>
         </div>
-        <div className="lg:order-3 lg:p-5">
+        <div className="lg:order-3 lg:p-5 lg:drop-shadow-lg">
           <Image
             src={`${process.env.BASEURL}/images/team/angeline.webp`}
             layout="responsive"
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
             height={200}
           />
         </div>
-        <div className="lg:order-5 lg:p-5">
+        <div className="lg:order-5 lg:p-5 lg:drop-shadow-lg">
           <Image
             src={`${process.env.BASEURL}/images/team/venus.webp`}
             layout="responsive"
